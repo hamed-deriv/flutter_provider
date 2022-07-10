@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import 'package:flutter_provider/pages/counter.dart';
-import 'package:flutter_provider/providers/counter_provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({required this.title, Key? key}) : super(key: key);
@@ -18,7 +14,7 @@ class HomePage extends StatelessWidget {
             children: const <Widget>[
               Text('You have pushed the button this many times:'),
               SizedBox(height: 16),
-              Counter(),
+              // Counter(),
             ],
           ),
         ),
@@ -28,19 +24,19 @@ class HomePage extends StatelessWidget {
             FloatingActionButton(
               child: const Icon(Icons.remove),
               tooltip: 'Decrement',
-              onPressed: context.read<CounterProvider>().decrement,
+              onPressed: () {},
             ),
             const SizedBox(width: 8),
             FloatingActionButton(
               child: const Icon(Icons.refresh),
               tooltip: 'Reset',
-              onPressed: context.read<CounterProvider>().reset,
+              onPressed: () {},
             ),
             const SizedBox(width: 8),
             FloatingActionButton(
               child: const Icon(Icons.add),
               tooltip: 'Increment',
-              onPressed: context.read<CounterProvider>().increment,
+              onPressed: () {},
             ),
           ],
         ),
